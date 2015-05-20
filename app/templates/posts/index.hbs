@@ -1,0 +1,36 @@
+<h1>Posts list</h1>
+
+<p>
+  {{link-to "New Post" "posts.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each post in model}}
+        <tr>
+          <td>
+            {{link-to "Edit" "posts.edit" post}}
+          </td>
+          <td>
+            {{link-to "Show" "posts.show" post}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" post}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Posts found
+  </p>
+{{/if}}
