@@ -1,14 +1,16 @@
 /* global require, module */
 
-//var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var EmberAddon = require('ember-cli/lib/broccoli/ember-app');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+//var EmberAddon = require('ember-cli/lib/broccoli/ember-app');
 
-//var app = new EmberApp();
+var app = new EmberApp();
+/*
 var app = new EmberAddon({
    fingerprint: {
     	exclude: ['screenshot.png', 'style.css'],
    }	
 });
+*/
 
 app.import(app.bowerDirectory + '/materialize/bin/materialize.css');
 app.import(app.bowerDirectory + '/materialize/bin/materialize.js');
